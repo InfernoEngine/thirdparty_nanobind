@@ -4,15 +4,30 @@
 	<GlobalSolutionName>ThirdParty</GlobalSolutionName>
 	<GlobalNamespace>potato</GlobalNamespace>
 
-	<StaticLibrary>
+	<Library>
 		<Name>thirdparty_nanobind</Name>
 		<SourceRoot>src</SourceRoot>
 		<ExportedIncludeDirectory>include</ExportedIncludeDirectory>
 		<LocalIncludeDirectory>include</LocalIncludeDirectory>
+		
 		<ThirdParty>true</ThirdParty>
-		<ThirdPartySourceFile>common.cpp;error.cpp;implicit.cpp;nb_enum.cpp;nb_func.cpp;nb_internals.cpp;nb_ndarray.cpp;nb_static_property.cpp;nb_type.cpp;trampoline.cpp</ThirdPartySourceFile>
+		<ThirdPartySharedGlobalExportDefine>NB_SHARED</ThirdPartySharedGlobalExportDefine>
+		<ThirdPartySharedLocalBuildDefine>NB_BUILD</ThirdPartySharedLocalBuildDefine>
+		<ThirdPartySourceFile>
+			common.cpp
+			error.cpp
+			implicit.cpp
+			nb_enum.cpp
+			nb_func.cpp
+			nb_internals.cpp
+			nb_ndarray.cpp
+			nb_static_property.cpp
+			nb_type.cpp
+			trampoline.cpp
+		</ThirdPartySourceFile>
+
 		<Dependency>thirdparty_python</Dependency>
 		<Dependency>thirdparty_robinmap</Dependency>
-	</StaticLibrary>
+	</Library>
 
 </Module>
